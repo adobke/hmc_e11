@@ -3569,7 +3569,7 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="LED2" library="led" deviceset="LED-2AC-" device="CP41B-WES"/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="30"/>
-<part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="30"/>
+<part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="200"/>
 <part name="VDD2" library="supply1" deviceset="VDD" device=""/>
 <part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="200"/>
 <part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="120"/>
@@ -3602,6 +3602,8 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
 <part name="V_OUT6" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="R11" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="200"/>
+<part name="VDD3" library="supply1" deviceset="VDD" device=""/>
+<part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3666,6 +3668,8 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="SUPPLY11" gate="GND" x="17.78" y="-22.86"/>
 <instance part="V_OUT6" gate="1" x="35.56" y="0"/>
 <instance part="R11" gate="G$1" x="25.4" y="-2.54" rot="R180"/>
+<instance part="VDD3" gate="G$1" x="-20.32" y="116.84"/>
+<instance part="SUPPLY12" gate="GND" x="-20.32" y="106.68"/>
 </instances>
 <busses>
 </busses>
@@ -3690,6 +3694,11 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="190.5" y1="134.62" x2="195.58" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="134.62" x2="195.58" y2="132.08" width="0.1524" layer="91"/>
 <junction x="190.5" y="134.62"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="3"/>
+<pinref part="VDD3" gate="G$1" pin="VDD"/>
+<wire x1="-20.32" y1="114.3" x2="-27.94" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -3858,6 +3867,11 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="Q1" gate="1" pin="E"/>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
 <wire x1="190.5" y1="96.52" x2="190.5" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="1"/>
+<pinref part="SUPPLY12" gate="GND" pin="GND"/>
+<wire x1="-20.32" y1="109.22" x2="-27.94" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
